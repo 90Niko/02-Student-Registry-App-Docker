@@ -3,12 +3,13 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                echo 'Building the project'
+               bat 'npm install'
             }
         }
         stage('Test'){
             steps{
-                echo 'Testing the project'
+                bat '''npm test'''
+
             }
         }
         stage('Deploy'){
